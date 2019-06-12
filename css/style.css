@@ -50,8 +50,8 @@ h4 {
 
 #home-cover {
     height: 100%;
-    background-image: url('../img/bg-home.png')!important;
-
+    background-image: url('../img/bg-home.gif');
+    position:absolute;
     /*background-size: 100% 100%; */
 
 }
@@ -81,10 +81,10 @@ h4 {
 ======================================================*/
 
 .bg-parallax {
-    background-repeat: no-repeat!important;
-    background-size: cover!important;
-    background-position: center!important;
-    background-attachment: fixed!important!important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
         /*object-fit: contain;
     background-size: contain;
     background-position: center; */
@@ -380,7 +380,7 @@ h4.team-member-designation {
 ======================================================*/
 
 #testimonials-cover {
-    background-image: url("../img/bg-testimonials.jpg")!important;
+    background-image: url("../img/bg-testimonials.jpg");
 }
 
 #testimonials .content-box {
