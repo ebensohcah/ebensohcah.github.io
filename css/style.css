@@ -51,7 +51,6 @@ h4 {
 #home-cover {
     height: 100%;
     background-image: url('../img/bg-home.gif');
-    position:absolute;
     /*background-size: 100% 100%; */
 
 }
@@ -380,7 +379,7 @@ h4.team-member-designation {
 ======================================================*/
 
 #testimonials-cover {
-    background-image: url("../img/bg-testimonials.jpg");
+    background-image: url("../img/bg-testimonials.gif");
 }
 
 #testimonials .content-box {
@@ -505,7 +504,7 @@ ul.pricing-spec li p {
 ======================================================*/
 
 #stats-cover {
-    background-image: url("../img/bg-stats.jpg");
+    background-image: url("../img/bg-stats.gif");
 }
 
 #stats .content-box {
