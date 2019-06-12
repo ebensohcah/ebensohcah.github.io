@@ -162,7 +162,7 @@ $(function(){
 /*====================================================
                 RANDOM COLOR GENERATOR
 ====================================================*/
-// Grab the Header with h1
+/*// Grab the Header with h1
 var header = document.querySelector("h3")
 
 // Then you can interface with the object.
@@ -191,3 +191,4 @@ function changeHeaderColor() {
 
 // Now perform the action over intervals (milliseocnds):
 setInterval("changeHeaderColor()", 500);
+*/
