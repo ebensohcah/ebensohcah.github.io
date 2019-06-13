@@ -17,6 +17,7 @@
 html,
 body {
     height: 100%;
+    min-height: 100%; /* enforce height */
 }
 
 body {
@@ -296,6 +297,7 @@ h4 {
 
 .img-wrapper {
     overflow: hidden;
+    padding: 1px
 }
 
 .img-wrapper img {
