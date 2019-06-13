@@ -50,7 +50,9 @@ h4 {
 
 #home-cover {
     height: 100%;
-    background-image: url('../img/bg-home.gif');
+    background-image: url('../img/PresentImg2.jpg');
+        z-index: 100;
+    position: relative;
     /*background-size: 100% 100%; */
 
 }
