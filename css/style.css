@@ -50,9 +50,8 @@ h4 {
 
 #home-cover {
     height: 100%;
-    background-image: url('../img/PresentImg2.jpg');
-        z-index: 100;
-    position: relative;
+    background-image: url('../img/bg-home.jpg');
+    
     /*background-size: 100% 100%; */
 
 }
@@ -177,7 +176,7 @@ h4 {
     font-size: 30px;
     font-weight: 700;
     text-align: center;
-    margin: 30 0 30px 0;
+    margin: 30px 0 30px 0;
 }
 
 .content-title-white h3 {
@@ -704,7 +703,7 @@ navbar-fixed-top #footer-menu a:hover {
 
 }
 
-.navbar-nav > li > ul > li > a: hover {
+.navbar-nav > li > ul > li > a:hover {
     color: #34c6d3;
     font-size: 12px;
     background-color: rgba(0, 0, 0, 0.1);
