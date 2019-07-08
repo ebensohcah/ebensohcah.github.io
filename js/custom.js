@@ -76,9 +76,8 @@ $(function () {
 
 /*====================================================
                         CLIENTS
-====================================================*/
-$(function () {
-
+                        
+                        
     $("#clients-list").owlCarousel({
         items: 5,
         autoplay: true,
@@ -97,6 +96,31 @@ $(function () {
             },
             992: {
                 items: 5
+            }
+        }
+    });                        
+                        
+====================================================*/
+$(function () {
+
+    $("#clients-list").owlCarousel({
+        items: 3,
+        autoplay: true,
+        smartSpeed: 700,
+        loop: true,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            480: {
+                items: 2
+            },
+            768: {
+                items: 2
+            },
+            992: {
+                items: 2
             }
         }
     });

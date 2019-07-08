@@ -47,6 +47,7 @@ h4 {
 
 #home {
     height: 100%;
+    margin-top: 65px;
 }
 
 #home-cover {
@@ -244,6 +245,12 @@ h4 {
 }
 
 
+
+#vision-desc p {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 400;
+}
 
 
 /*====================================================
@@ -698,6 +705,8 @@ navbar-fixed-top #footer-menu a:hover {
     font-weight: 300;
 }
 
+
+
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
@@ -720,7 +729,6 @@ navbar-fixed-top #footer-menu a:hover {
     background-color: rgba(110, 110, 110, 0.8);
     background: none;
 }
-
 
 
 
