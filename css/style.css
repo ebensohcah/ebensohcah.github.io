@@ -89,7 +89,7 @@ h4 {
 
 .mynavbar-brand {
     float: left;
-    font-size: 10px;
+    font-size: 9px;
     color: #fff;
     text-align:center;
 }
@@ -745,7 +745,10 @@ navbar-fixed-top #footer-menu a:hover {
     background: none;
 }
 
-.dropdown:hover .dropdown-menu {display: block;}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    /*background: #fff;*/
+}
 
 
 
@@ -774,10 +777,56 @@ navbar-fixed-top #footer-menu a:hover {
     background-color: #fff;
 }
 
+
+/*
+[1]: All items a forced onto a single line, causing the overflow when necessary.
+[2]: Automatic overflow means a scroll bar won’t be present if it isn’t needed
+[3]: Make it smooth scrolling on iOS devices
+[4]: Hide the ugly scrollbars in Edge until the scrollable area is hovered
+[5]: Hide the scroll bar in WebKit browsers
+*/
 .navbar-collapse {
-    max-height: none !important;
+    /*max-height: none !important;*/
+    
+    white-space: nowrap;/* [1] */
+    overflow-x: auto;/* [2] */
+    -webkit-overflow-scrolling: touch;/* [3] */
+    -ms-overflow-style: -ms-autohiding-scrollbar;/* [4] */
+    padding-right: 700px;
 }
+
+/* [5] */
+.navbar-collapse::-webkit-scrollbar {
+    display: none;
+}
+
+
 
 .vesco-top-nav ul.navbar-nav > li.active > a {
     color: #34c6d3;
 }
+
+
+/*Rotation*/
+.loading {
+		-webkit-animation: rotation 5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+
+
+
+
+
+
+
+
+
+
