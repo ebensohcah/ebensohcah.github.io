@@ -343,11 +343,11 @@ h4 {
 ======================================================*/
 
 .team-member {
-    margin: 0 15px;
+    margin: 0 3px;
 }
 
 .team-member-info {
-    padding: 10px 0 30px 0;
+    padding: 10px 0 8px 0;
 }
 
 h4.team-member-name {
@@ -366,6 +366,11 @@ h4.team-member-designation {
     margin-top: 5px;
 }
 
+.rotateImage:hover {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+    transition: 500ms linear all;
+}
 
 /*====================================================
                        SOCIAL
@@ -700,7 +705,8 @@ navbar-fixed-top #footer-menu a:hover {
 }
 
 .vesco-nav-wrapper {
-    padding: 0 85px;
+    /*padding: 0 85px;*/
+    padding: 0 30px;
 }
 
 .navbar-nav {
