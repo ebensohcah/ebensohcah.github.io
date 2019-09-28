@@ -131,7 +131,7 @@
             </div>
 
             <div class="col-md-6">
-                <canvas id="myChart2" height="450" width="500"></canvas>
+                <canvas id="GenderDistributionChart" height="450" width="500"></canvas>
                 <br>
                 <br>
                 <br>
@@ -326,8 +326,6 @@
 
 
     <script>
-        let ChildrenByReionChart = document.getElementById('ChildrenByReionChart').getContext('2d');
-
         // Global Options
         Chart.defaults.global.defaultFontFamily = 'Lato';
         Chart.defaults.global.defaultFontSize = 12;
@@ -347,19 +345,21 @@
         Chart.defaults.global.showScale = false;
         Chart.defaults.global.pointDotStrokeWidth = 2;
 
-
-        let massPopChart = new Chart(ChildrenByReionChart, {
+//        Regional Distribution of Children
+        let ChildrenByReionChart = document.getElementById('ChildrenByReionChart').getContext('2d');
+        
+        let newChildrenByReionChart = new Chart(ChildrenByReionChart, {
             type: 'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
             data: {
-                labels: ['Ashanti', 'Brong Ahafo', 'Eastern', 'Western', 'Central'],
+                labels: ['Ashanti', 'Brong Ahafo', 'Central', 'Eastern', 'Western'],
                 datasets: [{
                     label: 'Region',
                     data: [
                         10251,
                         6907,
+                        1330,
                         7415,
-                        8969,
-                        1330
+                        8969
                     ],
                     //backgroundColor:'green',
                     backgroundColor: [
@@ -408,31 +408,24 @@
             }
         });
 
-        //     MyChart2
-        let myChart2 = document.getElementById('myChart2').getContext('2d');
-        let massPopChart2 = new Chart(myChart2, {
+        
+        
+        //     Gender Distribution
+        let GenderDistributionChart = document.getElementById('GenderDistributionChart').getContext('2d');
+        let newGenderDistributionChart = new Chart(GenderDistributionChart, {
             type: 'pie', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
             data: {
-                labels: ['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
+                labels: ['Male', 'Female'],
                 datasets: [{
-                    label: 'Population',
+                    label: 'Gender',
                     data: [
-                        617594,
-                        181045,
-                        153060,
-                        106519,
-                        105162,
-                        95072
+                        17626,
+                        17246
                     ],
                     //backgroundColor:'green',
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(255, 206, 86, 0.6)',
-                        'rgba(75, 192, 192, 0.6)',
-                        'rgba(153, 102, 255, 0.6)',
-                        'rgba(255, 159, 64, 0.6)',
-                        'rgba(255, 99, 132, 0.6)'
+                        'rgba(54, 162, 235, 0.6)'
                     ],
                     borderWidth: 1,
                     borderColor: '#777',
@@ -443,7 +436,7 @@
             options: {
                 title: {
                     display: true,
-                    text: 'Largest Cities In Massachusetts',
+                    text: 'Gender Distribution',
                     fontSize: 25
                 },
                 legend: {
