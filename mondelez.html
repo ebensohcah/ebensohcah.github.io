@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- title -->
-    <title>Modern Responsive Website</title>
+    <title>Mondelez Reports</title>
 
     <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.ico">
@@ -48,7 +48,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 
-
+    <!-- Data Tables-->
+    <link href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css" rel="stylesheet" />
+<!--    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" rel="stylesheet" />-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 
 </head>
 
@@ -90,19 +93,19 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Data Input<span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="communityregister.html">Community Register</a></li>
+                                    <li><a href="communityregister.html">Community Register</a></li>                                 
                                     <li><a href="datainput.html">New Fields</a></li>
                                 </ul>
-                            </li>
-                            <li class="dropdown">
+                            </li>                         
+                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reports<span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="unicef.html">Unicef</a></li>
-                                    <li><a href="mondelez.html">Mondelēz</a></li>
-                                    <li><a href="uniterra.html">Uniterra</a></li>
+                                    <li><a href="unicef.html">Unicef</a></li>                               
+                                    <li><a href="mondelez.html">Mondelēz</a></li>                              
+                                    <li><a href="uniterra.html">Uniterra</a></li>                                    
                                 </ul>
-                            </li>
+                            </li>  
                             <li><a href="index.html#contact">Contact</a></li>
                             <li><a class="smooth-scroll CollapseNavbarMobile" href="#"><i class="fa fa-user"></i></a></li>
                         </ul>
@@ -116,11 +119,24 @@
     </header>
 
     <br>
+    <br>  
     <br>
     <br>
     <br>
-    <br>
-    <br>
+    
+    
+    
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -171,12 +187,626 @@
                 <br>
                 <br>
                 <br>
-            </div>                                             
+            </div>    
+             <div class="col-md-6">
+                <canvas id="HazCLRegionalDistributionChart" height="450" width="500"></canvas>
+                <br>
+                <br>
+                <br>
+            </div>    
+             <div class="col-md-6">
+                <canvas id="HazCLGenderDistributionChart" height="450" width="500"></canvas>
+                <br>
+                <br>
+                <br>
+            </div>   
+             <div class="col-md-6">
+                <canvas id="HighRiskCLGenderDistributionChart" height="450" width="500"></canvas>
+                <br>
+                <br>
+                <br>
+            </div>            
+             <div class="col-md-6">
+                <canvas id="HighRiskCLRegionalDistributionChart" height="450" width="500"></canvas>
+                <br>
+                <br>
+                <br>
+            </div>                                                                                                                                                              
         </div>
     </div>
+    
+    
+    
+    
+     <br>
+    <br>
+    
+    
+   <div class="container">
+       <center>
+           <h5>Distribution of Children at Community Level</h5>
+       </center>
+       <table id="example" class="display" style="width:100%">
+           <thead>
+               <tr class="tableizer-firstrow">
+                   <th>Region</th>
+                   <th>District</th>
+                   <th>Number of Children</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr>
+                   <td>Ashanti</td>
+                   <td>Ahafo Ano North</td>
+                   <td>3927</td>
+               </tr>
+               <tr>
+                   <td>Ashanti</td>
+                   <td>Amansie West</td>
+                   <td>2320</td>
+               </tr>
+               <tr>
+                   <td>Ashanti</td>
+                   <td>Atwima Mponua</td>
+                   <td>2475</td>
+               </tr>
+               <tr>
+                   <td>Ashanti</td>
+                   <td>Sekyere East</td>
+                   <td>1529</td>
+               </tr>
+               <tr>
+                   <td>Brong Ahafo</td>
+                   <td>Asunafo North</td>
+                   <td>4161</td>
+               </tr>
+               <tr>
+                   <td>Brong Ahafo</td>
+                   <td>Asunafo South</td>
+                   <td>2746</td>
+               </tr>
+               <tr>
+                   <td>Central</td>
+                   <td>Awutu Senya</td>
+                   <td>1330</td>
+               </tr>
+               <tr>
+                   <td>Eastern</td>
+                   <td>Ayensuano</td>
+                   <td>1422</td>
+               </tr>
+               <tr>
+                   <td>Eastern</td>
+                   <td>Fanteakwa</td>
+                   <td>981</td>
+               </tr>
+               <tr>
+                   <td>Eastern</td>
+                   <td>New Juaben</td>
+                   <td>638</td>
+               </tr>
+               <tr>
+                   <td>Eastern</td>
+                   <td>Suhum</td>
+                   <td>2057</td>
+               </tr>
+               <tr>
+                   <td>Eastern</td>
+                   <td>Upper West Akim District</td>
+                   <td>1377</td>
+               </tr>
+               <tr>
+                   <td>Eastern</td>
+                   <td>West Akim</td>
+                   <td>940</td>
+               </tr>
+               <tr>
+                   <td>Western</td>
+                   <td>Bia West</td>
+                   <td>4418</td>
+               </tr>
+               <tr>
+                   <td>Western</td>
+                   <td>Juaboso</td>
+                   <td>1154</td>
+               </tr>
+               <tr>
+                   <td>Western</td>
+                   <td>Wassa East</td>
+                   <td>3397</td>
+               </tr>
+           </tbody>
+           <tfoot>
+               <tr>
+                   <th>Region</th>
+                   <th>District</th>
+                   <th>Number of Children</th>
+               </tr>
+           </tfoot>
+       </table>
+   </div>
+      
+       
+         
+     
+    
+    
     <br>
     <br>
     <br>
+
+
+
+
+
+
+
+   <div class="container">
+       <center>
+           <h5>Distribution of Children at District Level</h5>
+       </center>
+       <table id="example2" class="display" style="width:100%">
+           <thead>
+               <tr>
+                   <th>Region</th>
+                   <th>District</th>
+                   <th>Community</th>                   
+                   <th>Number of Children</th>                 
+               </tr>
+           </thead>
+           <tbody>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Abonsuaso</td><td>113</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Abutifi</td><td>20</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Achina</td><td>128</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Addaikrom</td><td>87</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Adukrom</td><td>151</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Ahodwo Nyamebekyere</td><td>35</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Akrofoso</td><td>53</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Akurakese</td><td>38</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Amadwo</td><td>35</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Amakrom</td><td>75</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Amoakokrom</td><td>85</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Appiahkrom</td><td>27</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Asarfoassin</td><td>62</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Asemuakrom</td><td>5</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Atonsu Asanso</td><td>26</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Atuahenekrom</td><td>258</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Betinko</td><td>38</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Boagyaa2</td><td>32</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Bokuruwa/Amokrom</td><td>164</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Bonkron</td><td>138</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Bosikese</td><td>68</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Brosankro</td><td>6</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Domaa Nkrankrom</td><td>25</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Essienkyem</td><td>97</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Fawobotoso</td><td>23</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Gyaakyekrom</td><td>29</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Gyamerakrom</td><td>36</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Hiamankwa</td><td>30</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Karimkrom</td><td>15</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Katapei</td><td>105</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Kotei Nkwanta</td><td>83</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Krakosua</td><td>37</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Kwakuduakrom</td><td>46</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Kwasu</td><td>113</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Kwasu/Nyinasua</td><td>5</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Manfo</td><td>184</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Mensahkrom</td><td>45</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Nkwantabisa</td><td>35</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Numasua</td><td>180</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Nyamaa</td><td>15</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Nyamedewoasie</td><td>18</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Ogyam</td><td>11</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Old Brosankro</td><td>159</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Onwe</td><td>42</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Onyinase</td><td>43</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Pokuakuraa</td><td>4</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Pokukrom</td><td>218</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Sabronum</td><td>91</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Subriso</td><td>230</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Suponso</td><td>56</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Tepa</td><td>50</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Tettehkrom</td><td>53</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Trede</td><td>84</td></tr>
+ <tr><td>Ashanti</td><td>Ahafo Ano North</td><td>Tutuka</td><td>121</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>3Nanhini</td><td>40</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Aboabo Tetekaso</td><td>72</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Abore</td><td>66</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Abuoso</td><td>57</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Adagya</td><td>64</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Adimposu No2</td><td>50</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Ahwerewa</td><td>172</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Akyekyerekrom</td><td>55</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Ankam Mpranease</td><td>79</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Apenemedi</td><td>40</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Aponapon</td><td>74</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Asuadei</td><td>40</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Atobrakrom</td><td>34</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Ayiem</td><td>62</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Beboabou</td><td>86</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Besease</td><td>72</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Bonsaaso</td><td>114</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Domi Beposo</td><td>83</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Domi- Nyamebekyere</td><td>48</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Edwinase</td><td>70</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Essuowin</td><td>98</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Fawotrikye</td><td>35</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Gyeduako</td><td>30</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Kwahu Manukrom</td><td>58</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Kwekokrom</td><td>97</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Manso Kwahu</td><td>39</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Manso Odaho</td><td>131</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Mem</td><td>47</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Morho</td><td>17</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Mosease</td><td>30</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Mpranease</td><td>69</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Nipankyeremia</td><td>79</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Nnanyiananse</td><td>12</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Nsiana</td><td>71</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Pakyi-Banko</td><td>41</td></tr>
+ <tr><td>Ashanti</td><td>Amansie West</td><td>Takorase</td><td>88</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Aboabogya</td><td>79</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Abofrem</td><td>167</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Abrosanse</td><td>36</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Achiase</td><td>70</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Adupri</td><td>79</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Ahwiam</td><td>21</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Akomfere</td><td>105</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Akoraboukrom</td><td>143</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Akwaburaso</td><td>28</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Ammokrom</td><td>22</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Aniamoa</td><td>190</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Antwiagyeikrom</td><td>173</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Baakoniaba</td><td>46</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Barimayena</td><td>74</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Bentinko</td><td>170</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Beyendenkrom</td><td>18</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Bibiani Old Town</td><td>111</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Botrampa</td><td>84</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Domeabra</td><td>36</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Donkoto Lineso</td><td>33</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Donkoto Santawora</td><td>73</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Hwediem</td><td>26</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Kyerayaaso</td><td>155</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Mwaniha</td><td>51</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Nankaba</td><td>60</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Nsuontem</td><td>86</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Ntobroso</td><td>139</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Salem</td><td>101</td></tr>
+ <tr><td>Ashanti</td><td>Atwima Mponua</td><td>Wansamire</td><td>99</td></tr>
+ <tr><td>Ashanti</td><td>Sekyere East</td><td>Ahensan</td><td>134</td></tr>
+ <tr><td>Ashanti</td><td>Sekyere East</td><td>Anunya</td><td>28</td></tr>
+ <tr><td>Ashanti</td><td>Sekyere East</td><td>Apemso</td><td>118</td></tr>
+ <tr><td>Ashanti</td><td>Sekyere East</td><td>Attakrom</td><td>186</td></tr>
+ <tr><td>Ashanti</td><td>Sekyere East</td><td>Awaham</td><td>11</td></tr>
+ <tr><td>Ashanti</td><td>Sekyere East</td><td>Bimma 1&2</td><td>26</td></tr>
+ <tr><td>Ashanti</td><td>Sekyere East</td><td>Bomso</td><td>100</td></tr>
+ <tr><td>Ashanti</td><td>Sekyere East</td><td>Bouya</td><td>15</td></tr>
+ <tr><td>Ashanti</td><td>Sekyere East</td><td>Brofoyedru</td><td>32</td></tr>
+ <tr><td>Ashanti</td><td>Sekyere East</td><td>Daakoho</td><td>15</td></tr>
+ <tr><td>Ashanti</td><td>Sekyere East</td><td>Mahiniso</td><td>25</td></tr>
+ <tr><td>Ashanti</td><td>Sekyere East</td><td>Naama</td><td>151</td></tr>
+ <tr><td>Ashanti</td><td>Sekyere East</td><td>Nkwakwanua</td><td>120</td></tr>
+ <tr><td>Ashanti</td><td>Sekyere East</td><td>Nsutem</td><td>4</td></tr>
+ <tr><td>Ashanti</td><td>Sekyere East</td><td>Ntunkumso</td><td>72</td></tr>
+ <tr><td>Ashanti</td><td>Sekyere East</td><td>Odurokrom</td><td>58</td></tr>
+ <tr><td>Ashanti</td><td>Sekyere East</td><td>Oguaa</td><td>10</td></tr>
+ <tr><td>Ashanti</td><td>Sekyere East</td><td>Okaikrom</td><td>226</td></tr>
+ <tr><td>Ashanti</td><td>Sekyere East</td><td>Senchi</td><td>198</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Abidjan</td><td>84</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Ahantamokese</td><td>49</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Ahenkro</td><td>51</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Akrodie</td><td>284</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Akutuase</td><td>37</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Akwaaduro</td><td>44</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Akwaboahene (Ayomso)</td><td>20</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Akwaboahene (Kasapin)</td><td>30</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Ampenkro</td><td>150</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Antwi Agyeikrom</td><td>92</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Asantemen Council</td><td>163</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Asuadai</td><td>159</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Asukese</td><td>147</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Asumura</td><td>174</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Awewoho Manhyia</td><td>208</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Ayomso</td><td>390</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Bedabour</td><td>29</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Bediako</td><td>226</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Fawohoyeden</td><td>241</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Fianko</td><td>150</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Goaso Nkrankrom</td><td>77</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Gyaenkotabuo</td><td>64</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Gyasikrom</td><td>66</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Jerusalem</td><td>66</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Kokofu Nkrankrom</td><td>51</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Kumaho</td><td>46</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Kumooso</td><td>40</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Kwadwo Onno</td><td>7</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Kwahu</td><td>24</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Kwakukrah</td><td>49</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Kwartekrom</td><td>55</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Mfama</td><td>72</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Mfante</td><td>95</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Mpamase</td><td>95</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Peprakrom</td><td>96</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Pomaakrom</td><td>173</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Sekyerekrom</td><td>137</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Tipokrom</td><td>138</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo North</td><td>Tweapease</td><td>82</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Abukrom</td><td>56</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Abuom</td><td>347</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Achiaakrom</td><td>35</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Adwumakese</td><td>56</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Adwumamu</td><td>139</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Afodowa</td><td>85</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Agyarekrom</td><td>81</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Agyedabi</td><td>24</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Ananekrom</td><td>26</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Anum</td><td>88</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Aprakukrom</td><td>26</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Asempaneye</td><td>89</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Bobiekrom</td><td>20</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Bosompemagya</td><td>4</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Bowohomoden</td><td>24</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Camp No. 1</td><td>125</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Dankwakrom</td><td>62</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Dietwa</td><td>57</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Dodowa</td><td>87</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Duruwaakrom</td><td>161</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Dwumakrom</td><td>33</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Ejisu</td><td>42</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Gyamfikrom</td><td>2</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Kensakrom</td><td>32</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Kofibengkrom</td><td>110</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Kokooso</td><td>120</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Korkorkrom</td><td>17</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Kwamano</td><td>46</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Larbikrom</td><td>43</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Manhyia</td><td>25</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Marfokrom</td><td>88</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Ntonso</td><td>140</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Odamekrom</td><td>48</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Owusukrom</td><td>36</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Pafo</td><td>102</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Pesewukrom</td><td>60</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Policekrom</td><td>8</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Sampa</td><td>34</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Siiso</td><td>146</td></tr>
+ <tr><td>Brong Ahafo</td><td>Asunafo South</td><td>Tumfourhrom</td><td>22</td></tr>
+ <tr><td>Central</td><td>Awutu Senya</td><td>Adokokwaa</td><td>51</td></tr>
+ <tr><td>Central</td><td>Awutu Senya</td><td>Ankamase</td><td>30</td></tr>
+ <tr><td>Central</td><td>Awutu Senya</td><td>Ayensuako</td><td>149</td></tr>
+ <tr><td>Central</td><td>Awutu Senya</td><td>Brofoyeduro</td><td>50</td></tr>
+ <tr><td>Central</td><td>Awutu Senya</td><td>Ehuntem</td><td>84</td></tr>
+ <tr><td>Central</td><td>Awutu Senya</td><td>Kakraka</td><td>15</td></tr>
+ <tr><td>Central</td><td>Awutu Senya</td><td>Kawanopado</td><td>14</td></tr>
+ <tr><td>Central</td><td>Awutu Senya</td><td>Kofi Ansah</td><td>48</td></tr>
+ <tr><td>Central</td><td>Awutu Senya</td><td>Kofi Whettey</td><td>43</td></tr>
+ <tr><td>Central</td><td>Awutu Senya</td><td>Mayenda</td><td>65</td></tr>
+ <tr><td>Central</td><td>Awutu Senya</td><td>Mensahkwaa</td><td>40</td></tr>
+ <tr><td>Central</td><td>Awutu Senya</td><td>Nyarkokwaa</td><td>136</td></tr>
+ <tr><td>Central</td><td>Awutu Senya</td><td>Obodakaba</td><td>65</td></tr>
+ <tr><td>Central</td><td>Awutu Senya</td><td>Oframase</td><td>15</td></tr>
+ <tr><td>Central</td><td>Awutu Senya</td><td>Okwampa</td><td>115</td></tr>
+ <tr><td>Central</td><td>Awutu Senya</td><td>Oshimpo</td><td>79</td></tr>
+ <tr><td>Central</td><td>Awutu Senya</td><td>Penim</td><td>121</td></tr>
+ <tr><td>Central</td><td>Awutu Senya</td><td>Pobikwaa</td><td>92</td></tr>
+ <tr><td>Central</td><td>Awutu Senya</td><td>Sarkwa</td><td>76</td></tr>
+ <tr><td>Central</td><td>Awutu Senya</td><td>Tawiahkwaa</td><td>42</td></tr>
+ <tr><td>Eastern</td><td>Ayensuano</td><td>Abeho</td><td>63</td></tr>
+ <tr><td>Eastern</td><td>Ayensuano</td><td>Abobiri</td><td>114</td></tr>
+ <tr><td>Eastern</td><td>Ayensuano</td><td>Adimadim</td><td>149</td></tr>
+ <tr><td>Eastern</td><td>Ayensuano</td><td>Amanaseaboabo</td><td>81</td></tr>
+ <tr><td>Eastern</td><td>Ayensuano</td><td>Apauwawase</td><td>85</td></tr>
+ <tr><td>Eastern</td><td>Ayensuano</td><td>Ayekokooso</td><td>158</td></tr>
+ <tr><td>Eastern</td><td>Ayensuano</td><td>Boasisibi</td><td>69</td></tr>
+ <tr><td>Eastern</td><td>Ayensuano</td><td>Dokrochiwa</td><td>64</td></tr>
+ <tr><td>Eastern</td><td>Ayensuano</td><td>Duodukrom</td><td>74</td></tr>
+ <tr><td>Eastern</td><td>Ayensuano</td><td>Kofipare</td><td>94</td></tr>
+ <tr><td>Eastern</td><td>Ayensuano</td><td>Kuano/Abeho</td><td>95</td></tr>
+ <tr><td>Eastern</td><td>Ayensuano</td><td>Kwaboanta</td><td>96</td></tr>
+ <tr><td>Eastern</td><td>Ayensuano</td><td>Mankrong</td><td>68</td></tr>
+ <tr><td>Eastern</td><td>Ayensuano</td><td>Minimade</td><td>51</td></tr>
+ <tr><td>Eastern</td><td>Ayensuano</td><td>Ntowkrom</td><td>62</td></tr>
+ <tr><td>Eastern</td><td>Ayensuano</td><td>Onakwase</td><td>36</td></tr>
+ <tr><td>Eastern</td><td>Ayensuano</td><td>Tetenku</td><td>63</td></tr>
+ <tr><td>Eastern</td><td>Fanteakwa</td><td>Abompe</td><td>46</td></tr>
+ <tr><td>Eastern</td><td>Fanteakwa</td><td>Adjeikrom</td><td>60</td></tr>
+ <tr><td>Eastern</td><td>Fanteakwa</td><td>Akyeam Dome</td><td>84</td></tr>
+ <tr><td>Eastern</td><td>Fanteakwa</td><td>Akyeam Hemang</td><td>141</td></tr>
+ <tr><td>Eastern</td><td>Fanteakwa</td><td>Bepoase</td><td>27</td></tr>
+ <tr><td>Eastern</td><td>Fanteakwa</td><td>Bonkame</td><td>43</td></tr>
+ <tr><td>Eastern</td><td>Fanteakwa</td><td>Bososo</td><td>79</td></tr>
+ <tr><td>Eastern</td><td>Fanteakwa</td><td>Ehiamenkyene</td><td>27</td></tr>
+ <tr><td>Eastern</td><td>Fanteakwa</td><td>Gyampomani</td><td>39</td></tr>
+ <tr><td>Eastern</td><td>Fanteakwa</td><td>Juaso</td><td>160</td></tr>
+ <tr><td>Eastern</td><td>Fanteakwa</td><td>Koradaso</td><td>20</td></tr>
+ <tr><td>Eastern</td><td>Fanteakwa</td><td>Nsuapemso</td><td>94</td></tr>
+ <tr><td>Eastern</td><td>Fanteakwa</td><td>Osino</td><td>20</td></tr>
+ <tr><td>Eastern</td><td>Fanteakwa</td><td>Saamang</td><td>141</td></tr>
+ <tr><td>Eastern</td><td>New Juaben</td><td>Agyekumhene Akura</td><td>25</td></tr>
+ <tr><td>Eastern</td><td>New Juaben</td><td>Akwadum Adonponsu</td><td>145</td></tr>
+ <tr><td>Eastern</td><td>New Juaben</td><td>Asikasu</td><td>160</td></tr>
+ <tr><td>Eastern</td><td>New Juaben</td><td>Asuoja Jumapo</td><td>58</td></tr>
+ <tr><td>Eastern</td><td>New Juaben</td><td>Kofikrom</td><td>76</td></tr>
+ <tr><td>Eastern</td><td>New Juaben</td><td>Mpaem (Suhyen)</td><td>116</td></tr>
+ <tr><td>Eastern</td><td>New Juaben</td><td>Oyoko</td><td>49</td></tr>
+ <tr><td>Eastern</td><td>New Juaben</td><td>Worapong</td><td>9</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Abenabo</td><td>68</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Abisimdawa</td><td>117</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Adidiso</td><td>106</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Akorabo</td><td>104</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Akote</td><td>41</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Ateibu</td><td>124</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Ayisikrom</td><td>84</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Dademantse</td><td>79</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Esaase</td><td>18</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Gorjiase</td><td>150</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Kokoteasua</td><td>35</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Kopoanya</td><td>87</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Krobom</td><td>35</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Kromameng</td><td>122</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Kukua</td><td>33</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Nankese-Ningo</td><td>58</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Nkatenkwan</td><td>24</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Obomofodensua</td><td>98</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Okanta</td><td>118</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Okorase</td><td>200</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Otwebedidua</td><td>154</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Suhumabisim</td><td>84</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Supresu</td><td>74</td></tr>
+ <tr><td>Eastern</td><td>Suhum</td><td>Trotor</td><td>44</td></tr>
+ <tr><td>Eastern</td><td>Upper West Akim District</td><td>Abamkrom</td><td>71</td></tr>
+ <tr><td>Eastern</td><td>Upper West Akim District</td><td>Akim Bremen</td><td>65</td></tr>
+ <tr><td>Eastern</td><td>Upper West Akim District</td><td>Asikasu Odumasi</td><td>201</td></tr>
+ <tr><td>Eastern</td><td>Upper West Akim District</td><td>Asukyerema</td><td>125</td></tr>
+ <tr><td>Eastern</td><td>Upper West Akim District</td><td>Asuokaw</td><td>72</td></tr>
+ <tr><td>Eastern</td><td>Upper West Akim District</td><td>Essaso</td><td>191</td></tr>
+ <tr><td>Eastern</td><td>Upper West Akim District</td><td>Kantanyensua</td><td>80</td></tr>
+ <tr><td>Eastern</td><td>Upper West Akim District</td><td>Kwao Baah</td><td>62</td></tr>
+ <tr><td>Eastern</td><td>Upper West Akim District</td><td>Obeng Yaw</td><td>218</td></tr>
+ <tr><td>Eastern</td><td>Upper West Akim District</td><td>Odumkyere Daamang</td><td>111</td></tr>
+ <tr><td>Eastern</td><td>Upper West Akim District</td><td>Owurakesim</td><td>56</td></tr>
+ <tr><td>Eastern</td><td>Upper West Akim District</td><td>Sukrong Cannan</td><td>81</td></tr>
+ <tr><td>Eastern</td><td>Upper West Akim District</td><td>Winnang</td><td>44</td></tr>
+ <tr><td>Eastern</td><td>West Akim</td><td>Adiembra</td><td>25</td></tr>
+ <tr><td>Eastern</td><td>West Akim</td><td>Akanteng</td><td>111</td></tr>
+ <tr><td>Eastern</td><td>West Akim</td><td>Asafoatse</td><td>102</td></tr>
+ <tr><td>Eastern</td><td>West Akim</td><td>Atta Ne Atta</td><td>103</td></tr>
+ <tr><td>Eastern</td><td>West Akim</td><td>Bonkuku</td><td>77</td></tr>
+ <tr><td>Eastern</td><td>West Akim</td><td>Kwaku Sae</td><td>89</td></tr>
+ <tr><td>Eastern</td><td>West Akim</td><td>Kwapaa</td><td>75</td></tr>
+ <tr><td>Eastern</td><td>West Akim</td><td>Nwamase</td><td>38</td></tr>
+ <tr><td>Eastern</td><td>West Akim</td><td>Odjarde</td><td>82</td></tr>
+ <tr><td>Eastern</td><td>West Akim</td><td>Okotokrom</td><td>131</td></tr>
+ <tr><td>Eastern</td><td>West Akim</td><td>Oppongkrom</td><td>107</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Abosikrom</td><td>90</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Adeipena No.1</td><td>105</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Adjoafua</td><td>381</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Ameyawkrom/ Agyenkwam</td><td>128</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Amoakrom/ Amoashed</td><td>83</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Appau-Danso/ Dansokrom</td><td>201</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Asuopiri</td><td>101</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Biano</td><td>109</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Cannan</td><td>114</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Debiso</td><td>195</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>E.K Manu</td><td>47</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Esoekrom/ Osonokrom</td><td>91</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Essam</td><td>137</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Jericho/ Gyaenkontabuo</td><td>65</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Kojoaba</td><td>155</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Kroboman</td><td>147</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Kwamebikrom</td><td>100</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Kwasi Nkrumah</td><td>214</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Meserenyame</td><td>88</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Mfanteman</td><td>282</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>New Abesim</td><td>269</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>New Agogo</td><td>127</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>New Nsuatre</td><td>84</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>New Papase</td><td>462</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>New Wenchie</td><td>72</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Nkrabea</td><td>50</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Ntim/Bogyakrom</td><td>53</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Nyame Nnae</td><td>50</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Ohiampenika/ Fefeefei</td><td>79</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Otengkrom</td><td>15</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Tepakrom/ Pillar '34'</td><td>83</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Wamfie</td><td>43</td></tr>
+ <tr><td>Western</td><td>Bia West</td><td>Yawmatwa</td><td>198</td></tr>
+ <tr><td>Western</td><td>Juaboso</td><td>Abono</td><td>39</td></tr>
+ <tr><td>Western</td><td>Juaboso</td><td>Abrokofe</td><td>79</td></tr>
+ <tr><td>Western</td><td>Juaboso</td><td>Adwumam</td><td>68</td></tr>
+ <tr><td>Western</td><td>Juaboso</td><td>Berekrom</td><td>46</td></tr>
+ <tr><td>Western</td><td>Juaboso</td><td>Dangermu</td><td>22</td></tr>
+ <tr><td>Western</td><td>Juaboso</td><td>Danyame</td><td>59</td></tr>
+ <tr><td>Western</td><td>Juaboso</td><td>Domi</td><td>93</td></tr>
+ <tr><td>Western</td><td>Juaboso</td><td>Jato</td><td>28</td></tr>
+ <tr><td>Western</td><td>Juaboso</td><td>Komeama</td><td>107</td></tr>
+ <tr><td>Western</td><td>Juaboso</td><td>Kotosaa</td><td>32</td></tr>
+ <tr><td>Western</td><td>Juaboso</td><td>Kwanware</td><td>29</td></tr>
+ <tr><td>Western</td><td>Juaboso</td><td>Mantukwa</td><td>81</td></tr>
+ <tr><td>Western</td><td>Juaboso</td><td>Nsinsem</td><td>44</td></tr>
+ <tr><td>Western</td><td>Juaboso</td><td>Nsonyameye</td><td>27</td></tr>
+ <tr><td>Western</td><td>Juaboso</td><td>Nyabekere</td><td>67</td></tr>
+ <tr><td>Western</td><td>Juaboso</td><td>Sayeran</td><td>54</td></tr>
+ <tr><td>Western</td><td>Juaboso</td><td>Sayereso</td><td>83</td></tr>
+ <tr><td>Western</td><td>Juaboso</td><td>Seniagya</td><td>176</td></tr>
+ <tr><td>Western</td><td>Juaboso</td><td>Teabante</td><td>20</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Ahomakormua</td><td>80</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Akotosu</td><td>173</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Akrofi</td><td>60</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Amankesease</td><td>53</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Amponsaso</td><td>107</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Anto</td><td>200</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Apetebi</td><td>66</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Atwebesa</td><td>185</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Awawam</td><td>2</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Basa</td><td>52</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Beenu Yie</td><td>54</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Didiso</td><td>45</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Domama Domeabra</td><td>68</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Domama Nyamebekyere #1</td><td>76</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Domama Nyamebekyere #2</td><td>172</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Ebukrom Junction</td><td>71</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Edukwa</td><td>6</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Essuamankrom</td><td>39</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Kofi Ashia</td><td>51</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Kwaabah</td><td>156</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Miawani</td><td>53</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Nkapiem</td><td>39</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Nyakonakpe</td><td>41</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Nyame Ndae</td><td>98</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Ologo</td><td>67</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Owumpesika</td><td>80</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Saakyi</td><td>74</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Sekunde Akurase</td><td>9</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Sekyere Aboaboso</td><td>19</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Sekyere Abroadzewuram</td><td>52</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Sekyere Adiembra</td><td>107</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Sekyere Himan</td><td>120</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Sekyere Krobo</td><td>171</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Sekyere Mparem</td><td>77</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Sekyere Nsuta</td><td>42</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Sekyere Nyamebekyere</td><td>38</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Sekyere Obuase</td><td>137</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Suhyen</td><td>77</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Tetteh Agbo</td><td>47</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Tsimtsimhwe</td><td>76</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Wassa Atobiase</td><td>122</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Wassa Edwenase</td><td>35</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Wassa Ekutuase</td><td>46</td></tr>
+ <tr><td>Western</td><td>Wassa East</td><td>Wassa Essamang</td><td>54</td></tr>
+           </tbody>
+           <tfoot>
+               <tr>
+                   <th>Region</th>
+                   <th>District</th>
+                   <th>Community</th>                   
+                   <th>Number of Children</th>                   
+               </tr>
+           </tfoot>
+       </table>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -255,6 +885,7 @@
 
         </div>
 
+       
         <div id="footer-bottom">
             <div class="container">
                 <div class="row">
@@ -322,10 +953,50 @@
 -->
 
 
+<!-- Data Tables-->
 
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
+ 
+ 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#example').DataTable({
+                "lengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
+                "paging": true,
+                "ordering": true,
+                "info": true,
+                "lengthChange": true,
+                dom: 'Blfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ]
+            });
+        });
+    </script>
 
-
-
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#example2').DataTable({
+                "lengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
+                "paging": true,
+                "ordering": true,
+                "info": true,
+                "lengthChange": true,
+                dom: 'Blfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ]
+            });
+        });
+    </script>
 
 
 
@@ -814,7 +1485,252 @@
         });
 
 
+
+        
+     
+         //  Regional Distribution of  Hazardous Child Labour 
+        let HazCLRegionalDistributionChart = document.getElementById('HazCLRegionalDistributionChart').getContext('2d');
+        let newHazCLRegionalDistributionChart = new Chart(HazCLRegionalDistributionChart, {
+            type: 'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data: {
+                labels: ['Ashanti', 'Brong Ahafo', 'Central', 'Eastern', 'Western'],
+                datasets: [{
+                    label: 'Region',
+                    data: [
+                        2642,
+                        1563,
+                        327,
+                        1419,
+                        2250
+                    ],
+                    //backgroundColor:'green',
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(153, 102, 255, 0.6)',
+                        'rgba(255, 159, 64, 0.6)'
+                    ],
+                    borderWidth: 1,
+                    borderColor: '#777',
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Regional Distribution of  Hazardous Child Labour',
+                    fontSize: 18
+                },
+                legend: {
+                    display: false,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
+                    }
+                },
+                layout: {
+                    padding: {
+                        left: 50,
+                        right: 0,
+                        bottom: 0,
+                        top: 0
+                    }
+                },
+                tooltips: {
+                    enabled: true
+                }
+            }
+        });
+    
+        
+        
+        
        
+ 
+        //   Gender Distribution of  Hazardous Child Labour 
+        let HazCLGenderDistributionChart = document.getElementById('HazCLGenderDistributionChart').getContext('2d');
+        let newHazCLGenderDistributionChart = new Chart(HazCLGenderDistributionChart, {
+            type: 'pie', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data: {
+                labels: ['Male', 'Female'],
+                datasets: [{
+                    label: 'Category',
+                    data: [
+                        4595,
+                        3606
+                    ],
+                    //backgroundColor:'green',
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)'
+                    ],
+                    borderWidth: 1,
+                    borderColor: '#777',
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Gender Distribution of  Hazardous Child Labour',
+                    fontSize: 18
+                },
+                legend: {
+                    display: true,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
+                    }
+                },
+                layout: {
+                    padding: {
+                        left: 50,
+                        right: 0,
+                        bottom: 0,
+                        top: 0
+                    }
+                },
+                tooltips: {
+                    enabled: true
+                }
+            }
+        });       
+            
+                
+ 
+        
+ 
+        // Gender Distribution of  High Risk of Child Labour
+        let HighRiskCLGenderDistributionChart = document.getElementById('HighRiskCLGenderDistributionChart').getContext('2d');
+        let newHighRiskCLGenderDistributionChart = new Chart(HighRiskCLGenderDistributionChart, {
+            type: 'pie', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data: {
+                labels: ['Male', 'Female'],
+                datasets: [{
+                    label: 'Category',
+                    data: [
+                        11219,
+                        11473
+                    ],
+                    //backgroundColor:'green',
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)'
+                    ],
+                    borderWidth: 1,
+                    borderColor: '#777',
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Gender Distribution of  High Risk of Child Labour',
+                    fontSize: 18
+                },
+                legend: {
+                    display: true,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
+                    }
+                },
+                layout: {
+                    padding: {
+                        left: 50,
+                        right: 0,
+                        bottom: 0,
+                        top: 0
+                    }
+                },
+                tooltips: {
+                    enabled: true
+                }
+            }
+        });       
+            
+                
+ 
+        
+        
+
+        
+     
+         //  Regional Distribution of  High Risk of Child Labour
+        let HighRiskCLRegionalDistributionChart = document.getElementById('HighRiskCLRegionalDistributionChart').getContext('2d');
+        let newHighRiskCLRegionalDistributionChart = new Chart(HighRiskCLRegionalDistributionChart, {
+            type: 'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data: {
+                labels: ['Ashanti', 'Brong Ahafo', 'Central', 'Eastern', 'Western'],
+                datasets: [{
+                    label: 'Region',
+                    data: [
+                        7087,
+                        3233,
+                        900,
+                        5409,
+                        6063
+                    ],
+                    //backgroundColor:'green',
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(153, 102, 255, 0.6)',
+                        'rgba(255, 159, 64, 0.6)'
+                    ],
+                    borderWidth: 1,
+                    borderColor: '#777',
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Regional Distribution of  High Risk of Child Labour',
+                    fontSize: 18
+                },
+                legend: {
+                    display: false,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
+                    }
+                },
+                layout: {
+                    padding: {
+                        left: 50,
+                        right: 0,
+                        bottom: 0,
+                        top: 0
+                    }
+                },
+                tooltips: {
+                    enabled: true
+                }
+            }
+        });
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -952,6 +1868,13 @@
         
         
     </script>
+
+
+
+
+
+
+
 
 
 
