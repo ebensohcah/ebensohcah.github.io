@@ -90,7 +90,7 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Data Input<span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="communityregister.html">Comunity Register</a></li>
+                                    <li><a href="communityregister.html">Community Register</a></li>
                                     <li><a href="datainput.html">New Fields</a></li>
                                 </ul>
                             </li>
@@ -137,18 +137,41 @@
                 <br>
             </div>
             <div class="col-md-6">
-                <canvas id="myChart3" height="450" width="500"></canvas>
+                <canvas id="CocoaAndNoncocoaDistributionChart" height="450" width="500"></canvas>
                 <br>
                 <br>
                 <br>
             </div>
-
             <div class="col-md-6">
-                <canvas id="myChart4" height="450" width="500"></canvas>
+                <canvas id="CocoaLifeRegionalDistributionChart" height="450" width="500"></canvas>
                 <br>
                 <br>
                 <br>
             </div>
+            <div class="col-md-6">
+                <canvas id="NonCocoaLifeRegionalDistributionChart" height="450" width="500"></canvas>
+                <br>
+                <br>
+                <br>
+            </div>    
+             <div class="col-md-6">
+                <canvas id="InOrOutOfSchoolDistributionChart" height="450" width="500"></canvas>
+                <br>
+                <br>
+                <br>
+            </div> 
+             <div class="col-md-6">
+                <canvas id="WFCLGenderDistributionChart" height="450" width="500"></canvas>
+                <br>
+                <br>
+                <br>
+            </div> 
+             <div class="col-md-6">
+                <canvas id="WFCLRegionalDistributionChart" height="450" width="500"></canvas>
+                <br>
+                <br>
+                <br>
+            </div>                                             
         </div>
     </div>
     <br>
@@ -159,24 +182,6 @@
 
 
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <center>
-        <img src="img/misc/under_construction_hammer.gif" class="img-responsive" alt="team member">
-    </center>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
 
 
@@ -380,7 +385,7 @@
                 title: {
                     display: true,
                     text: 'Regional Distribution of Children',
-                    fontSize: 25
+                    fontSize: 18
                 },
                 legend: {
                     display: false,
@@ -436,8 +441,8 @@
             options: {
                 title: {
                     display: true,
-                    text: 'Gender Distribution',
-                    fontSize: 25
+                    text: 'Gender Distribution of Children',
+                    fontSize: 18
                 },
                 legend: {
                     display: true,
@@ -462,6 +467,358 @@
 
 
 
+ 
+        //   Cocoa and Non-cocoa Life Distribution  
+        let CocoaAndNoncocoaDistributionChart = document.getElementById('CocoaAndNoncocoaDistributionChart').getContext('2d');
+        let newCocoaAndNoncocoaDistributionChart = new Chart(CocoaAndNoncocoaDistributionChart, {
+            type: 'pie', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data: {
+                labels: ['Cocoa life', 'Non-cocoa life'],
+                datasets: [{
+                    label: 'Category',
+                    data: [
+                        19362,
+                        15510
+                    ],
+                    //backgroundColor:'green',
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)'
+                    ],
+                    borderWidth: 1,
+                    borderColor: '#777',
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Cocoa & Non-cocoa Life Distribution of Children',
+                    fontSize: 18
+                },
+                legend: {
+                    display: true,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
+                    }
+                },
+                layout: {
+                    padding: {
+                        left: 50,
+                        right: 0,
+                        bottom: 0,
+                        top: 0
+                    }
+                },
+                tooltips: {
+                    enabled: true
+                }
+            }
+        });       
+        
+        
+        
+        
+ 
+        //   Cocoa Life Children Regional Distribution   
+        let CocoaLifeRegionalDistributionChart = document.getElementById('CocoaLifeRegionalDistributionChart').getContext('2d');
+        let newCocoaLifeRegionalDistributionChart = new Chart(CocoaLifeRegionalDistributionChart, {
+            type: 'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data: {
+                labels: ['Ashanti', 'Brong Ahafo', 'Central', 'Eastern', 'Western'],
+                datasets: [{
+                    label: 'Region',
+                    data: [
+                        4215,
+                        3922,
+                        760,
+                        4376,
+                        6089
+                    ],
+                    //backgroundColor:'green',
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(153, 102, 255, 0.6)',
+                        'rgba(255, 159, 64, 0.6)'
+                    ],
+                    borderWidth: 1,
+                    borderColor: '#777',
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Cocoa Life Regional Distribution of Children',
+                    fontSize: 18
+                },
+                legend: {
+                    display: false,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
+                    }
+                },
+                layout: {
+                    padding: {
+                        left: 50,
+                        right: 0,
+                        bottom: 0,
+                        top: 0
+                    }
+                },
+                tooltips: {
+                    enabled: true
+                }
+            }
+        });
+
+       
+        
+ 
+ 
+        //   Non-Cocoa Life Regional Distribution of Children  
+        let NonCocoaLifeRegionalDistributionChart = document.getElementById('NonCocoaLifeRegionalDistributionChart').getContext('2d');
+        let newNonCocoaLifeRegionalDistributionChart = new Chart(NonCocoaLifeRegionalDistributionChart, {
+            type: 'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data: {
+                labels: ['Ashanti', 'Brong Ahafo', 'Central', 'Eastern', 'Western'],
+                datasets: [{
+                    label: 'Region',
+                    data: [
+                        4215,
+                        3922,
+                        760,
+                        4376,
+                        6089
+                    ],
+                    //backgroundColor:'green',
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(153, 102, 255, 0.6)',
+                        'rgba(255, 159, 64, 0.6)'
+                    ],
+                    borderWidth: 1,
+                    borderColor: '#777',
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Non-Cocoa Life Regional Distribution of Children',
+                    fontSize: 18
+                },
+                legend: {
+                    display: false,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
+                    }
+                },
+                layout: {
+                    padding: {
+                        left: 50,
+                        right: 0,
+                        bottom: 0,
+                        top: 0
+                    }
+                },
+                tooltips: {
+                    enabled: true
+                }
+            }
+        });
+
+               
+        
+        
+        
+       
+ 
+        //   Children in or Out of School  
+        let InOrOutOfSchoolDistributionChart = document.getElementById('InOrOutOfSchoolDistributionChart').getContext('2d');
+        let newInOrOutOfSchoolDistributionChart = new Chart(InOrOutOfSchoolDistributionChart, {
+            type: 'pie', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data: {
+                labels: ['In School', 'Out of School'],
+                datasets: [{
+                    label: 'Category',
+                    data: [
+                        32421,
+                        2451
+                    ],
+                    //backgroundColor:'green',
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)'
+                    ],
+                    borderWidth: 1,
+                    borderColor: '#777',
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Children in or out of School',
+                    fontSize: 18
+                },
+                legend: {
+                    display: true,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
+                    }
+                },
+                layout: {
+                    padding: {
+                        left: 50,
+                        right: 0,
+                        bottom: 0,
+                        top: 0
+                    }
+                },
+                tooltips: {
+                    enabled: true
+                }
+            }
+        });       
+        
+                
+        
+        
+       
+ 
+        //   Gender Distribution of Worst Forms of Child Labour 
+        let WFCLGenderDistributionChart = document.getElementById('WFCLGenderDistributionChart').getContext('2d');
+        let newWFCLGenderDistributionChart = new Chart(WFCLGenderDistributionChart, {
+            type: 'pie', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data: {
+                labels: ['Male', 'Female'],
+                datasets: [{
+                    label: 'Category',
+                    data: [
+                        5265,
+                        4545
+                    ],
+                    //backgroundColor:'green',
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)'
+                    ],
+                    borderWidth: 1,
+                    borderColor: '#777',
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Gender Distribution of Worst Forms of Child Labour',
+                    fontSize: 18
+                },
+                legend: {
+                    display: true,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
+                    }
+                },
+                layout: {
+                    padding: {
+                        left: 50,
+                        right: 0,
+                        bottom: 0,
+                        top: 0
+                    }
+                },
+                tooltips: {
+                    enabled: true
+                }
+            }
+        });       
+            
+        
+        
+        
+        
+ 
+         //  Regional Distribution of Worst Forms of Child Labour 
+        let WFCLRegionalDistributionChart = document.getElementById('WFCLRegionalDistributionChart').getContext('2d');
+        let newWFCLRegionalDistributionChart = new Chart(WFCLRegionalDistributionChart, {
+            type: 'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data: {
+                labels: ['Ashanti', 'Brong Ahafo', 'Central', 'Eastern', 'Western'],
+                datasets: [{
+                    label: 'Region',
+                    data: [
+                        3042,
+                        2059,
+                        388,
+                        1699,
+                        2622
+                    ],
+                    //backgroundColor:'green',
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(153, 102, 255, 0.6)',
+                        'rgba(255, 159, 64, 0.6)'
+                    ],
+                    borderWidth: 1,
+                    borderColor: '#777',
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Regional Distribution of Worst Forms of Child Labour',
+                    fontSize: 18
+                },
+                legend: {
+                    display: false,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
+                    }
+                },
+                layout: {
+                    padding: {
+                        left: 50,
+                        right: 0,
+                        bottom: 0,
+                        top: 0
+                    }
+                },
+                tooltips: {
+                    enabled: true
+                }
+            }
+        });
+
+
+       
+        
+        
+        
+        
 
         //   MyChart3   
         let myChart3 = document.getElementById('myChart3').getContext('2d');
@@ -499,7 +856,7 @@
                 title: {
                     display: true,
                     text: 'Largest Cities In Massachusetts',
-                    fontSize: 25
+                    fontSize: 18
                 },
                 legend: {
                     display: true,
@@ -567,7 +924,7 @@
                 title: {
                     display: true,
                     text: 'Largest Cities In Massachusetts',
-                    fontSize: 25
+                    fontSize: 18
                 },
                 legend: {
                     display: true,
@@ -589,6 +946,11 @@
                 }
             }
         });
+        
+        
+        
+        
+        
     </script>
 
 
